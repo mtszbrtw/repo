@@ -33,9 +33,13 @@ class CarsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+
+
+        $this->repo->create(array('details'=>$request->details,'client'=>$request->client));
+
+        return redirect()->route('cars');
     }
 
     public function show($id)

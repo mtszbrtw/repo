@@ -19,6 +19,7 @@ Route::get('/', function () {
 
 
 Route::get('/cars',[CarsController::class,'index'])->name('cars');
+Route::post('/cars',[CarsController::class,'create'])->name('cars.create');
 Route::get('/cars/{id}',[CarsController::class,'show']);
 Route::get('/cars/edit/{id}',[CarsController::class,'edit']);
 Route::get('/cars/del/{id}',[CarsController::class,'destroy']);
